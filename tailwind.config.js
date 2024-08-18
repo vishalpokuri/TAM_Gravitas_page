@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         start: "#4872A7",
         end: "#00214A",
+        cardbg: "#0A0A0A",
       },
     },
   },

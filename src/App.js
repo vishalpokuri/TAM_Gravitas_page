@@ -5,10 +5,20 @@ import data_alchemy from "./images/data_alchemy.png";
 import survival from "./images/survival.png";
 import codecortex from "./images/codecortex.png";
 import { EventCard } from "./components/Card";
+import { NavbarContainer, NavItem, RegisterButton } from './components/Navbar';
+import {TeamCard} from './components/TeamCard';
 function App() {
   return (
     <>
-      <div className="w-screen h-20 bg-black"></div>
+      <div className="w-screen h-30 bg-black flex justify-center py-10">
+      <NavbarContainer>
+      <NavItem href="#home">Home</NavItem>
+      <NavItem href="#about">About</NavItem>
+      <NavItem href="#events">Events</NavItem>
+      <NavItem href="#contact">Contact</NavItem>
+      <RegisterButton href="#register">Register</RegisterButton>
+      </NavbarContainer>
+      </div>
       <div
         className="w-screen h-screen bg-black bg-cover bg-center"
         style={{ backgroundImage: `url(${bg})` }}
@@ -51,7 +61,10 @@ ticking, pressure will be high,
 go through all the levels and
 escape the room."
         />
+
       </div>
+      
+      
     </>
   );
 }

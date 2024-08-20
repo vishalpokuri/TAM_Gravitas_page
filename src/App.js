@@ -8,6 +8,7 @@ import { EventCard } from "./components/Card";
 import { TeamCard } from "./components/TeamCard";
 import { Welcome } from "./components/Welcome";
 import Nav from "./components/Nav";
+import { Button } from "./components/Button";
 function App() {
   return (
     <>
@@ -73,42 +74,42 @@ function App() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <h2 className="text-6xl leading-tight mt-12">CONTACT</h2>
-        <div className="w-4/6 bg-cardbg bg-opacity-70 h-3/5 mt-16  p-4">
-          <div className="flex flex-row">
-            {/* This is the top wrapper for send button too */}
-            <div className="flex flex-col m-4">
-              <div className="flex flex-row justify-around ">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
-                />
-              </div>
-              <div className="flex flex-row py-6 justify-around">
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="bg-transparent  border-b border-solid border-phcolor  placeholder:text-phcolor font-extralight p-4 h-10 "
-                />
-                <input
-                  type="email"
-                  placeholder="Email ID"
-                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10 "
-                />
-              </div>
-              <textarea
-                rows={8}
-                cols={60}
-                className="bg-transparent mx-32 placeholder:text-phcolor font-extralight p-4"
-                placeholder="Message"
+        <div className="w-4/6 bg-cardbg bg-opacity-70 h-2/3 mt-16  p-4 flex flex-col items-center">
+          <div className="flex flex-row"></div>
+          <div className="flex flex-col m-4">
+            <div className="flex flex-row justify-around ">
+              <input
+                type="text"
+                placeholder="First Name"
+                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
               />
             </div>
+            <div className="flex flex-row py-6 justify-around">
+              <input
+                type="text"
+                placeholder="Subject"
+                className="bg-transparent  border-b border-solid border-phcolor  placeholder:text-phcolor font-extralight p-4 h-10 "
+              />
+              <input
+                type="email"
+                placeholder="Email ID"
+                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10 "
+              />
+            </div>
+            <textarea
+              rows={6}
+              cols={60}
+              className="bg-transparent border-b border-solid border-phcolor mx-32 placeholder:text-phcolor font-extralight mt-4"
+              placeholder="Message"
+            />
           </div>
+          <br />
+          <Button what="Send message" />
         </div>
       </div>
     </>

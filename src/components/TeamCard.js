@@ -1,26 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const TeamCard= styled.div`
-color: #59A3FF;
-font-weight: bold;
-justify-content: center;
-align-items: center;
-text-align: center;
-font-size: 1.7rem;
-border-radius: 15px;
-padding: 20px;
-background-color: #0A0A0A;
-flex-direction: column;
-width: 10rem;
-height: 10rem;
-margin: 5px;
-box-shadow: 0 0 15px rgba(0, 0, 139, 0.7);
- &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-cursor: pointer;
-  }
-`
-;
-
-export {TeamCard};
+export function TeamCard({ children }) {
+  return (
+    <div className="text-blue-400 font-bold flex justify-center items-center text-center text-xl rounded-lg p-5 bg-gray-900 flex-col w-40 h-40 m-1.5 shadow-lg shadow-blue-900/70 transition-colors duration-300 ease-in-out hover:bg-white/10 cursor-pointer">
+      {children}
+    </div>
+  );
+}

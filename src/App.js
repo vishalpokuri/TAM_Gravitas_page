@@ -7,6 +7,7 @@ import codecortex from "./images/codecortex.png";
 import { EventCard } from "./components/Card";
 import { NavbarContainer, NavItem, RegisterButton } from "./components/Navbar";
 import { TeamCard } from "./components/TeamCard";
+import { Welcome } from "./components/Welcome";
 function App() {
   return (
     <>
@@ -19,17 +20,7 @@ function App() {
           <RegisterButton href="#register">Register</RegisterButton>
         </NavbarContainer>
       </div>
-      <div
-        className="w-screen h-screen bg-black bg-cover bg-center"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <div className="flex flex-col items-center text-white pt-32 ">
-          <h1 className="text-6xl leading-tight">TAM-VIT</h1>
-          <p className="font-thin text-5xl leading-tight">welcomes you to</p>
-          <h2 className="text-7xl leading-tight">graVITas'24</h2>
-          <Button className="mt-28" what="Discover events" />
-        </div>
-      </div>
+      <Welcome />
       <div className="w-screen h-60 bg-black flex flex-col items-center text-white">
         <h2 className="text-6xl leading-tight">SPONSOR BROs</h2>
       </div>

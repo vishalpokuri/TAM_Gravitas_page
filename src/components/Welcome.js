@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import bg from "./images/bluegrid.png";
+import bg from "../images/bluegrid.png";
 export function Welcome() {
   return (
     <div

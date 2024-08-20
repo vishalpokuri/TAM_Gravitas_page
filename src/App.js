@@ -1,25 +1,17 @@
 import "./App.css";
 import bg from "./images/bluegrid.png";
-import { Button } from "./components/Button";
 import data_alchemy from "./images/data_alchemy.png";
 import survival from "./images/survival.png";
 import codecortex from "./images/codecortex.png";
 import { EventCard } from "./components/Card";
-import { NavbarContainer, NavItem, RegisterButton } from "./components/Navbar";
+
 import { TeamCard } from "./components/TeamCard";
 import { Welcome } from "./components/Welcome";
+import Nav from "./components/Nav";
 function App() {
   return (
     <>
-      <div className="w-screen h-30 bg-black flex justify-center pt-10">
-        <NavbarContainer>
-          <NavItem href="#home">Home</NavItem>
-          <NavItem href="#about">About</NavItem>
-          <NavItem href="#events">Events</NavItem>
-          <NavItem href="#contact">Contact</NavItem>
-          <RegisterButton href="#register">Register</RegisterButton>
-        </NavbarContainer>
-      </div>
+      <Nav />
       <Welcome />
       <div className="w-screen h-60 bg-black flex flex-col items-center text-white">
         <h2 className="text-6xl leading-tight">SPONSOR BROs</h2>
@@ -74,6 +66,49 @@ function App() {
             intersection of AI and ML with various domains such as healthcare,
             finance, education, and more
           </span>
+        </div>
+      </div>
+      <div
+        className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white my-36 "
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <h2 className="text-6xl leading-tight mt-12">CONTACT</h2>
+        <div className="w-4/6 bg-cardbg bg-opacity-70 h-3/5 mt-16  p-4">
+          <div className="flex flex-row">
+            {/* This is the top wrapper for send button too */}
+            <div className="flex flex-col m-4">
+              <div className="flex flex-row justify-around ">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
+                />
+              </div>
+              <div className="flex flex-row py-6 justify-around">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="bg-transparent  border-b border-solid border-phcolor  placeholder:text-phcolor font-extralight p-4 h-10 "
+                />
+                <input
+                  type="email"
+                  placeholder="Email ID"
+                  className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10 "
+                />
+              </div>
+              <textarea
+                rows={8}
+                cols={60}
+                className="bg-transparent mx-32 placeholder:text-phcolor font-extralight p-4"
+                placeholder="Message"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

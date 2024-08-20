@@ -2,7 +2,7 @@ import React from "react";
 
 export function NavbarContainer({ children }) {
   return (
-    <nav className="w-1/2 flex justify-around items-center bg-black p-2 rounded-3xl shadow-lg shadow-blue-900/70 h-12">
+    <nav className="w-1/2 flex justify-around items-center bg-black p-4 rounded-3xl shadow-lg shadow-blue-900/70 h-14">
       {children}
     </nav>
   );
@@ -23,7 +23,7 @@ export function RegisterButton({ href, children }) {
   return (
     <a
       href={href}
-      className="bg-blue-700 text-white no-underline text-lg p-2.5 rounded-xl transition-colors duration-300 ease-in-out hover:bg-blue-900"
+      className="m-2 bg-[#3665A0] text-white no-underline text-lg p-2.5 rounded-xl transition-colors duration-300 ease-in-out hover:bg-[#3665B5] "
     >
       {children}
     </a>

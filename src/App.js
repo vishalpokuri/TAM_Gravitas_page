@@ -4,11 +4,15 @@ import data_alchemy from "./images/data_alchemy.png";
 import survival from "./images/survival.png";
 import codecortex from "./images/codecortex.png";
 import { EventCard } from "./components/Card";
-
-import { TeamCard } from "./components/TeamCard";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaMedium } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+import { LinkItem, LinksContainer } from './components/MediaLinks';
 import { Welcome } from "./components/Welcome";
 import Nav from "./components/Nav";
 import { Button } from "./components/Button";
+import { Footer } from "./components/Footer";
+import SurvivalShowdown from "./components/pages/SurvivalShowdown";
 function App() {
   return (
     <>
@@ -112,6 +116,18 @@ function App() {
           <Button what="Send message" />
         </div>
       </div>
+      <div className="flex items-center justify-center min-h-[200px]">
+      <LinksContainer>
+      <LinkItem href="https://www.instagram.com/tam.vit_vellore/"><AiFillInstagram/></LinkItem>
+      <LinkItem href="https://medium.com/@tam_vit"><FaMedium/></LinkItem>
+      <LinkItem href="https://www.linkedin.com/company/tam-vit/?originalSubdomain=in"><FaLinkedin/></LinkItem>
+      </LinksContainer>
+      </div>
+      <Footer/>
+      {/*Uncomment to view survival shutdown and Code Cortex pages.*/}
+      {/*<SurvivalShowdown> SURVIVAL SHOWDOWN </SurvivalShowdown>*/}
+      {/*<SurvivalShowdown> CODE&lt;/&gt;CORTEX </SurvivalShowdown>*/}
+      
     </>
   );
 }

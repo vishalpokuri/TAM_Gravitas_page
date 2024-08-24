@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer";
 import Nav from "../components/Nav";
 
 function SurvivalShowdown() {
+  window.scroll(0, 0);
   return (
     <>
       <div className="w-screen h-30 bg-black flex justify-center py-10">

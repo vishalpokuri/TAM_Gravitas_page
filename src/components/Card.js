@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function EventCard(props) {
   return (
     <div
-      className={`relative flex flex-col w-1/3 h-[26rem] mx-24 bg-cardbg items-center rounded-2xl ${props.explicit}`}
+      className={`relative flex flex-col w-1/3 h-[26rem] mx-24 bg-cardbg items-center rounded-2xl shadow-md shadow-phcolor ${props.explicit}`}
     >
       <img
         src={props.image}

@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-
+import { Link } from "react-router-dom";
 export function EventCard(props) {
   return (
     <div
@@ -12,7 +12,12 @@ export function EventCard(props) {
       />
       <h2>{props.title}</h2> <br />
       <p className="font-extralight px-12 text-center text-sm">{props.desc}</p>
-      <Button className="absolute bottom-6  mt-0" what="Register" />
+      <Link
+        to={`/registration-${props.where}`}
+        className="absolute bottom-6  mt-0"
+      >
+        <Button what="Register" />
+      </Link>
     </div>
   );
 }

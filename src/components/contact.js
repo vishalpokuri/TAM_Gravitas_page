@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <>
       <div className="w-screen h-4 bg-black flex flex-col items-center text-white mt-10">
-        <h2 className="text-6xl leading-tight">Contact</h2>
+        <h2 id="contact" className="text-6xl leading-tight">Contact</h2>
       </div>
       <div
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white mt-20"

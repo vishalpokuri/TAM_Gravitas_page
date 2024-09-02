@@ -4,14 +4,10 @@ import data_alchemy from "../images/data_alchemy.png";
 import survival from "../images/survival.png";
 import codecortex from "../images/codecortex.png";
 import { EventCard } from "../components/Card";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaMedium } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
-import { LinkItem, LinksContainer } from "../components/MediaLinks";
+import Contact from "../components/contact";
 import { Welcome } from "../components/Welcome";
 import Nav from "../components/Nav";
-import { Button } from "../components/Button";
-import { Footer } from "../components/Footer";
+
 export function Home() {
   const eventsRef = useRef(null);
   const scrollToEvents = () => {
@@ -28,42 +24,41 @@ export function Home() {
       <Nav />
       <Welcome scrollToEvents={scrollToEvents} />
       <div className="w-screen h-60 bg-black flex flex-col items-center text-white">
-        <h2 className="text-6xl leading-tight">SPONSOR BROs</h2>
+        <h2 className=" text-4xl md:text-6xl leading-tight ">SPONSOR BROs</h2>
       </div>
       <div
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h2 ref={eventsRef} className="text-6xl leading-tight  mb-12">
+        <h2
+          ref={eventsRef}
+          className="text-4xl md:text-6xl leading-tight  mb-12"
+        >
           Events
         </h2>
-        <div className="flex flex-row justify-between">
+        <div className="grid grid-cols-1 gap-10 md:flex md:flex-row justify-between">
           <EventCard
-            explicit="mt-48"
+            explicit="mt-12 md:mt-48"
             image={data_alchemy}
             alt="Data Alchemy"
             title="Data Alchemy 2.0"
-            desc=" An AI&ML Workshop to learn from the basics to advanced algorithms,
-          master key concepts and make some exciting projects."
+            desc="An AI&ML Workshop to learn from the basics to advanced algorithms, master key concepts and make some exciting projects."
           />
           <EventCard
             image={codecortex}
             alt="Code Cortex"
             title="CodeCortex"
-            desc="A 56-hour hackathon including all tracks - AI&ML, IoT, Blockchain, Webdev, Appdev, Cybersec and many more. Bring ideas, implement and win."
+            desc="A 56-hour hackathon including all tracks - AI&ML, IoT, Blockchain, Webdev, Appdev, Cybersec, and many more. Bring ideas, implement and win."
             where="CodeCortex"
           />
           <EventCard
-            explicit="mt-48"
+            explicit="mt-12 md:mt-48"
             imageexplicit="mb-4"
             image={survival}
             alt="Survival Showdown"
             title="Survival Showdown"
             where="SurvivalShowdown"
-            desc=" An escape room where you have to complete a series of exciting tasks. Clock will be
-          ticking, pressure will be high,
-          go through all the levels and
-          escape the room."
+            desc="An escape room where you have to complete a series of exciting tasks. The clock will be ticking, pressure will be high, go through all the levels and escape the room."
           />
         </div>
       </div>
@@ -85,65 +80,7 @@ export function Home() {
           </span>
         </div>
       </div>
-      <div className="w-screen h-4 bg-black flex flex-col items-center text-white mt-10">
-        <h2 className="text-6xl leading-tight">Contact</h2>
-      </div>
-      <div
-        className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white mt-20"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <div className="w-4/6 bg-cardbg bg-opacity-70 h-2/3 mt-16  p-4 flex flex-col items-center">
-          <div className="flex flex-row"></div>
-          <div className="flex flex-col m-4">
-            <div className="flex flex-row justify-around ">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10"
-              />
-            </div>
-            <div className="flex flex-row py-6 justify-around">
-              <input
-                type="text"
-                placeholder="Subject"
-                className="bg-transparent  border-b border-solid border-phcolor  placeholder:text-phcolor font-extralight p-4 h-10 "
-              />
-              <input
-                type="email"
-                placeholder="Email ID"
-                className="bg-transparent  border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-4 h-10 "
-              />
-            </div>
-            <textarea
-              rows={6}
-              cols={60}
-              className="bg-transparent border-b border-solid border-phcolor mx-32 placeholder:text-phcolor font-extralight mt-4"
-              placeholder="Message"
-            />
-          </div>
-          <br />
-          <Button what="Send message" />
-        </div>
-        <div className="flex items-center justify-center min-h-[100px] mt-20">
-          <LinksContainer>
-            <LinkItem href="https://www.instagram.com/tam.vit_vellore/">
-              <AiFillInstagram />
-            </LinkItem>
-            <LinkItem href="https://medium.com/@tam_vit">
-              <FaMedium />
-            </LinkItem>
-            <LinkItem href="https://www.linkedin.com/company/tam-vit/?originalSubdomain=in">
-              <FaLinkedin />
-            </LinkItem>
-          </LinksContainer>
-        </div>
-        <Footer />
-      </div>
+      <Contact />
     </>
   );
 }

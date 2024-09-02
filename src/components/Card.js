@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function EventCard(props) {
   return (
     <div
-      className={`relative flex flex-col w-1/3 h-[26rem] mx-24 bg-cardbg items-center rounded-2xl shadow-md shadow-phcolor ${props.explicit}`}
+      className={`relative flex flex-col w-full md:w-1/3 h-[26rem] mx-4 md:mx-24 bg-cardbg items-center rounded-2xl shadow-md shadow-phcolor ${props.explicit}`}
     >
       <img
         src={props.image}
@@ -14,7 +14,7 @@ export function EventCard(props) {
       <p className="font-extralight px-12 text-center text-sm">{props.desc}</p>
       <Link
         to={`/registration-${props.where}`}
-        className="absolute bottom-6  mt-0"
+        className="absolute bottom-6 mt-0"
       >
         <Button what="Register" />
       </Link>

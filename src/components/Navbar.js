@@ -2,7 +2,7 @@ import React from "react";
 
 export function NavbarContainer({ children }) {
   return (
-    <nav className="w-1/2 flex justify-around items-center bg-black p-4 rounded-3xl shadow-lg shadow-blue-900/70 h-14">
+    <nav className="w-1/2 hidden md:flex justify-around items-center bg-black p-4 rounded-3xl shadow-lg shadow-blue-900/70 h-14 ">
       {children}
     </nav>
   );

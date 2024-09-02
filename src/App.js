@@ -25,7 +25,7 @@ function App() {
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h2 className="text-6xl leading-tight  mb-12">Events</h2>
+        <h2 id="events" className="text-6xl leading-tight  mb-12">Events</h2>
         <div className="flex flex-row justify-between">
           <EventCard
             explicit="mt-48"
@@ -59,7 +59,7 @@ function App() {
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white my-36 "
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h2 className="text-6xl leading-tight mt-32">ABOUT</h2>
+        <h2 id="about" className="text-6xl leading-tight mt-32">ABOUT</h2>
         <div className="w-4/6 bg-cardbg bg-opacity-70 h-2/4 mt-16 font-extralight text-2xl p-16 text-center ">
           <span className="text-white">
             The AI&ML Club is a dynamic student-led organization dedicated to
@@ -77,7 +77,7 @@ function App() {
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white my-36 "
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h2 className="text-6xl leading-tight mt-12">CONTACT</h2>
+        <h2 id="contact" className="text-6xl leading-tight mt-12">CONTACT</h2>
         <div className="w-4/6 bg-cardbg bg-opacity-70 h-2/3 mt-16  p-4 flex flex-col items-center">
           <div className="flex flex-row"></div>
           <div className="flex flex-col m-4">

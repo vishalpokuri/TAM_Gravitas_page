@@ -31,6 +31,7 @@ export function Home() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <h2
+          id="events"
           ref={eventsRef}
           className="text-4xl md:text-6xl leading-tight  mb-12"
         >
@@ -66,7 +67,7 @@ export function Home() {
         className="w-screen h-screen bg-black bg-cover bg-center flex flex-col items-center text-white mt-36 mb-6 "
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h2 className="text-6xl leading-tight mt-32">ABOUT</h2>
+        <h2 id="about" className="text-6xl leading-tight mt-32">ABOUT</h2>
         <div className="w-4/6 bg-cardbg bg-opacity-70 h-2/4 mt-16 font-extralight text-2xl p-16 text-center ">
           <span className="text-white">
             The AI&ML Club is a dynamic student-led organization dedicated to

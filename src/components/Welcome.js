@@ -8,7 +8,7 @@ export function Welcome({ scrollToEvents }) {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="flex flex-col items-center text-white pt-32">
-        <h1 className="text-4xl md:text-6xl leading-snug md:leading-tight">
+        <h1 id="home" className="text-4xl md:text-6xl leading-snug md:leading-tight">
           TAM-VIT
         </h1>
         <p className="text-3xl md:text-5xl font-thin leading-snug md:leading-tight">

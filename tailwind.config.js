@@ -11,6 +11,9 @@ module.exports = {
         cardbg: "#0A0A0A",
         phcolor: "#59A3FF",
       },
+      backgroundImage: {
+        gridbg: "url('C:Users/visha/tam_landingpagesrcimages/bluegrid.png')",
+      },
     },
   },
   plugins: [],

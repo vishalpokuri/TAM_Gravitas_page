@@ -20,11 +20,11 @@ function CodeCortex() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="flex flex-col items-center text-white">
-          <h1 className=" text-4xl md:text-6xl leading-tight mb-9 mt-16">
+          <h1 className=" mt-36 text-4xl md:text-6xl leading-tight mb-9 md:mt-16 text-center">
             CODE&lt;/&gt;CORTEX
           </h1>
 
-          <div className="flex gap-20 mb-12">
+          <div className="flex gap-10 mb-12">
             <Link to="/registration-ParticipantDetails/0">
               <TeamCard>
                 CREATE TEAM <br /> →

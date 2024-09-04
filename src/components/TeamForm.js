@@ -60,17 +60,16 @@ export default function TeamForm() {
               />
             </div>
 
-            <div className="flex m-6 justify-around p-6">
+            <div className="flex m-4 justify-around p-6">
               <button
                 type="button"
                 onClick={handleOpenModal}
-                className="bg-gradient-to-r from-start to-end font-light px-4 py-2 rounded-md  transform transition-transform duration-300 hover:-translate-y-2 text-white"
+                className="bg-gradient-to-r from-start to-end font-light px-4 py-2 rounded-md  transform transition-transform duration-300 hover:-translate-y-2 text-white mx-3"
               >
                 How to Fill?
               </button>
               <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
-
-              <Button what="Proceed to Payment" />
+              <Button what="Proceed to Payment" extras="mx-3" />
             </div>
           </form>
         </div>

@@ -9,14 +9,23 @@ import { Welcome } from "../components/Welcome";
 import Nav from "../components/Nav";
 import About from "../components/About";
 export function Home() {
-  const eventsRef = useRef(null);
+  const eventsRefbig = useRef(null);
+  const eventsRefsmol = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
-  const scrollToEvents = () => {
-    if (eventsRef.current) {
-      console.log(eventsRef.current); // Check if this logs the correct element
-      eventsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToEventsBig = () => {
+    if (eventsRefbig.current) {
+      console.log(eventsRefbig.current); // Check if this logs the correct element
+      eventsRefbig.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("eventsRef is null");
+    }
+  };
+  const scrollToEventsSmol = () => {
+    if (eventsRefsmol.current) {
+      console.log(eventsRefsmol.current); // Check if this logs the correct element
+      eventsRefsmol.current.scrollIntoView({ behavior: "smooth" });
     } else {
       console.log("eventsRef is null");
     }
@@ -37,10 +46,13 @@ export function Home() {
     <>
       <Nav
         scrollToAbout={scrollToAbout}
-        scrollToEvents={scrollToEvents}
+        scrollToEvents={scrollToEventsBig}
         scrollToContact={scrollToContact}
       />
-      <Welcome scrollToEvents={scrollToEvents} />
+      <Welcome
+        scrollToEventsSmol={scrollToEventsSmol}
+        scrollToEventsBig={scrollToEventsBig}
+      />
       <div className="w-screen h-60 bg-black flex flex-col items-center text-white">
         <h2 className="text-4xl md:text-6xl leading-tight">SPONSOR BROs</h2>
       </div>
@@ -54,7 +66,7 @@ export function Home() {
         >
           <div className="container mx-auto px-4 ">
             <h2
-              ref={eventsRef}
+              ref={eventsRefbig}
               className="text-6xl leading-tight mb-16 text-white text-center pt-12"
             >
               Events
@@ -87,7 +99,10 @@ export function Home() {
       </div>
       {/* Small screens: Separate background div for each card */}
       <div className="md:hidden">
-        <h2 className="text-4xl leading-tight mb-12 text-white text-center pt-12 bg-black">
+        <h2
+          ref={eventsRefsmol}
+          className="text-4xl leading-tight mb-12 text-white text-center pt-12 bg-black"
+        >
           Events
         </h2>
         <div

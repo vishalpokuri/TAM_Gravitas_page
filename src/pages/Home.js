@@ -1,5 +1,6 @@
 import bg from "../images/bluegrid.png";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import data_alchemy from "../images/data_alchemy.png";
 import survival from "../images/survival.png";
 import codecortex from "../images/codecortex.png";
@@ -8,7 +9,14 @@ import Contact from "../components/contact";
 import { Welcome } from "../components/Welcome";
 import Nav from "../components/Nav";
 import About from "../components/About";
+import HamburgerMenu from "../components/hamburgerMenu";
 export function Home() {
+  const navigate = useNavigate();
+  function handleHomeNavigate() {
+    navigate("/");
+    window.scroll(0, 0);
+  }
+
   const eventsRefbig = useRef(null);
   const eventsRefsmol = useRef(null);
   const aboutRef = useRef(null);
@@ -22,6 +30,7 @@ export function Home() {
       console.log("eventsRef is null");
     }
   };
+
   const scrollToEventsSmol = () => {
     if (eventsRefsmol.current) {
       console.log(eventsRefsmol.current); // Check if this logs the correct element
@@ -41,14 +50,24 @@ export function Home() {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+  const menuItems = [
+    { label: "Home", onClick: () => handleHomeNavigate() },
+    { label: "About", onClick: () => scrollToAbout() },
+    { label: "Events", onClick: () => scrollToEventsSmol() },
+    { label: "Contact", onClick: () => scrollToContact() },
+  ];
   return (
     <>
-      <Nav
-        scrollToAbout={scrollToAbout}
-        scrollToEvents={scrollToEventsBig}
-        scrollToContact={scrollToContact}
-      />
+      <div className="hidden md:block">
+        <Nav
+          scrollToAbout={scrollToAbout}
+          scrollToEvents={scrollToEventsBig}
+          scrollToContact={scrollToContact}
+        />
+      </div>
+      <div className="md:hidden">
+        <HamburgerMenu menuItems={menuItems} />
+      </div>
       <Welcome
         scrollToEventsSmol={scrollToEventsSmol}
         scrollToEventsBig={scrollToEventsBig}

@@ -18,7 +18,16 @@ function App() {
             element={<SurvivalShowdown />}
           />
           <Route path="/registration-CodeCortex" element={<CodeCortex />} />
-          <Route path="/registration-ParticipantDetails" element={<ParticipantDetails />} />
+          {/* Code cortex*/}
+          <Route
+            path="/registration-ParticipantDetails/0"
+            element={<ParticipantDetails />}
+          />
+          {/* survival showdown */}
+          <Route
+            path="/registration-ParticipantDetails/1"
+            element={<ParticipantDetails />}
+          />
         </Routes>
       </Router>
     </>

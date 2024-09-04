@@ -1,13 +1,22 @@
 import { NavItem, NavbarContainer } from "./Navbar";
+import { useNavigate } from "react-router-dom";
+export default function Nav({
+  scrollToAbout,
+  scrollToEvents,
+  scrollToContact,
+}) {
+  const navigate = useNavigate();
+  function handleHomeNavigate() {
+    navigate("/");
+  }
 
-export default function Nav() {
   return (
     <div className="w-screen h-30 bg-black flex justify-center pt-10">
       <NavbarContainer>
-        <NavItem href="#home">Home</NavItem>
-        <NavItem href="#about">About</NavItem>
-        <NavItem href="#events">Events</NavItem>
-        <NavItem href="#contact">Contact</NavItem>
+        <NavItem onClick={handleHomeNavigate}>Home</NavItem>
+        <NavItem onClick={scrollToEvents}>Events</NavItem>
+        <NavItem onClick={scrollToAbout}>About</NavItem>
+        <NavItem onClick={scrollToContact}>Contact</NavItem>
         <NavItem href="#register">Register</NavItem>
       </NavbarContainer>
     </div>

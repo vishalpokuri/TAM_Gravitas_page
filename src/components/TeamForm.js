@@ -1,7 +1,7 @@
 import bg from "../images/bluegrid.png";
 import { Button } from "./Button";
 import Modal from "./Modal";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function TeamForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function TeamForm() {
                 type="text"
                 placeholder="Reg. No."
                 className="bg-transparent border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-2 md:p-4 h-10 flex-1 md:ml-2"
-                required             
+                required
               />
             </div>
             <div className="flex flex-col md:flex-row mb-4 md:mb-6 p-3">
@@ -46,7 +46,7 @@ export default function TeamForm() {
               />
             </div>
             <div className="flex flex-col  md:flex-row mb-4 md:mb-6 p-3">
-            <input
+              <input
                 type="text"
                 placeholder="Team ID"
                 className="bg-transparent border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-2 md:p-4 h-10 flex-1 mb-4 md:mb-0 md:mr-2"
@@ -55,26 +55,25 @@ export default function TeamForm() {
               <input
                 type="number"
                 placeholder="No. of Team Members"
-                className="bg-transparent border-b border-solid border-phcolor placeholder:text-phcolor font-extralight md:p-4 h-10 flex-1 mb-4 md:mb-0 md:mr-2 mx-2"
+                className="bg-transparent border-b border-solid border-phcolor placeholder:text-phcolor font-extralight p-2 md:p-4 h-10 flex-1 md:ml-2"
                 required
               />
-             </div>
-            
-            <div className="flex justify-center m-6 justify-around p-6">
-            
-            <button 
-              type="button"
-              onClick={handleOpenModal} 
-              className="bg-gradient-to-r from-start to-end font-light px-4 py-2 rounded-md  transform transition-transform duration-300 hover:-translate-y-2 text-white">
-              How to Fill?
-            </button>
-            <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
-      
-            <Button what="Proceed to Payment" />
+            </div>
+
+            <div className="flex m-6 justify-around p-6">
+              <button
+                type="button"
+                onClick={handleOpenModal}
+                className="bg-gradient-to-r from-start to-end font-light px-4 py-2 rounded-md  transform transition-transform duration-300 hover:-translate-y-2 text-white"
+              >
+                How to Fill?
+              </button>
+              <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+
+              <Button what="Proceed to Payment" />
             </div>
           </form>
         </div>
-    
       </div>
     </>
   );

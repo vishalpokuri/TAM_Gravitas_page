@@ -6,7 +6,13 @@ import { Footer } from "../components/Footer";
 import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-function CodeCortex() {
+import HamburgerMenu from "../components/hamburgerMenu";
+function CodeCortex({
+  scrollToEventsBig,
+  scrollToAbout,
+  scrollToContact,
+  menuItems,
+}) {
   const navigate = useNavigate();
   function handleHomeNavigate() {
     navigate("/");
@@ -14,7 +20,16 @@ function CodeCortex() {
   window.scroll(0, 0);
   return (
     <>
-      <Nav />
+      <div className="hidden md:block">
+        <Nav
+          scrollToAbout={scrollToAbout}
+          scrollToEvents={scrollToEventsBig}
+          scrollToContact={scrollToContact}
+        />
+      </div>
+      <div className="md:hidden">
+        <HamburgerMenu menuItems={menuItems} />
+      </div>
       <div
         className="w-screen h-screen bg-black bg-cover bg-center "
         style={{ backgroundImage: `url(${bg})` }}

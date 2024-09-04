@@ -1,6 +1,5 @@
 import bg from "../images/bluegrid.png";
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+
 import data_alchemy from "../images/data_alchemy.png";
 import survival from "../images/survival.png";
 import codecortex from "../images/codecortex.png";
@@ -10,52 +9,80 @@ import { Welcome } from "../components/Welcome";
 import Nav from "../components/Nav";
 import About from "../components/About";
 import HamburgerMenu from "../components/hamburgerMenu";
-export function Home() {
-  const navigate = useNavigate();
-  function handleHomeNavigate() {
-    navigate("/");
-    window.scroll(0, 0);
-  }
+export function Home({
+  eventsRefbig,
+  eventsRefsmol,
+  aboutRef,
+  contactRef,
+  scrollToEventsBig,
+  scrollToEventsSmol,
+  scrollToAbout,
+  scrollToContact,
+  menuItems,
+}) {
+  // const navigate = useNavigate();
+  // function handleHomeNavigate() {
+  //   navigate("/");
+  //   window.scroll(0, 0);
+  // }
 
-  const eventsRefbig = useRef(null);
-  const eventsRefsmol = useRef(null);
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
+  // const eventsRefbig = useRef(null);
+  // const eventsRefsmol = useRef(null);
+  // const aboutRef = useRef(null);
+  // const contactRef = useRef(null);
 
-  const scrollToEventsBig = () => {
-    if (eventsRefbig.current) {
-      console.log(eventsRefbig.current); // Check if this logs the correct element
-      eventsRefbig.current.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.log("eventsRef is null");
-    }
-  };
+  // const scrollToEventsBig = () => {
+  //   if (eventsRefbig.current) {
+  //     console.log(eventsRefbig.current); // Check if this logs the correct element
+  //     eventsRefbig.current.scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     console.log("eventsRef is null");
+  //   }
+  // };
 
-  const scrollToEventsSmol = () => {
-    if (eventsRefsmol.current) {
-      console.log(eventsRefsmol.current); // Check if this logs the correct element
-      eventsRefsmol.current.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.log("eventsRef is null");
-    }
-  };
+  // const scrollToEventsSmol = () => {
+  //   if (eventsRefsmol.current) {
+  //     console.log(eventsRefsmol.current); // Check if this logs the correct element
+  //     eventsRefsmol.current.scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     console.log("eventsRef is null");
+  //   }
+  // };
 
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const scrollToContact = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const menuItems = [
-    { label: "Home", onClick: () => handleHomeNavigate() },
-    { label: "About", onClick: () => scrollToAbout() },
-    { label: "Events", onClick: () => scrollToEventsSmol() },
-    { label: "Contact", onClick: () => scrollToContact() },
-  ];
+  // const scrollToAbout = () => {
+  //   if (aboutRef.current) {
+  //     aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+  // const scrollToContact = () => {
+  //   if (contactRef.current) {
+  //     contactRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+  // const menuItems = [
+  //   { label: "Home", onClick: () => handleHomeNavigate() },
+  //   {
+  //     label: "Events",
+  //     onClick: () => {
+  //       navigate("/");
+  //       scrollToEventsSmol();
+  //     },
+  //   },
+  //   {
+  //     label: "About",
+  //     onClick: () => {
+  //       navigate("/");
+  //       scrollToAbout();
+  //     },
+  //   },
+  //   {
+  //     label: "Contact",
+  //     onClick: () => {
+  //       navigate("/");
+  //       scrollToContact();
+  //     },
+  //   },
+  // ];
   return (
     <>
       <div className="hidden md:block">

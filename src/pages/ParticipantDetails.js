@@ -2,12 +2,26 @@ import React from "react";
 import { Footer } from "../components/Footer";
 import Nav from "../components/Nav";
 import TeamForm from "../components/TeamForm";
-
-function ParticipantDetails() {
+import HamburgerMenu from "../components/hamburgerMenu";
+function ParticipantDetails({
+  scrollToEventsBig,
+  scrollToAbout,
+  scrollToContact,
+  menuItems,
+}) {
   window.scroll(0, 0);
   return (
     <>
-      <Nav />
+      <div className="hidden md:block">
+        <Nav
+          scrollToAbout={scrollToAbout}
+          scrollToEvents={scrollToEventsBig}
+          scrollToContact={scrollToContact}
+        />
+      </div>
+      <div className="md:hidden">
+        <HamburgerMenu menuItems={menuItems} />
+      </div>
 
       <div className="w-screen h-screen bg-black bg-cover bg-center">
         <div className="flex flex-col items-center text-white">

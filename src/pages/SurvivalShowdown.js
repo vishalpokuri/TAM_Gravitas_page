@@ -5,8 +5,13 @@ import bg from "../images/bluegrid.png";
 import { Footer } from "../components/Footer";
 import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function SurvivalShowdown() {
   window.scroll(0, 0);
+  const navigate = useNavigate();
+  function handleHomeNavigate() {
+    navigate("/");
+  }
   return (
     <>
       <Nav />
@@ -29,7 +34,7 @@ function SurvivalShowdown() {
               JOIN <br /> TEAM <br /> →
             </TeamCard>
           </div>
-          <Button what="Back to Home" />
+          <Button what="Back to Home" onClick={handleHomeNavigate} />
         </div>
       </div>
       <Footer />

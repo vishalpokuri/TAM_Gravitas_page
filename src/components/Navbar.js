@@ -16,7 +16,7 @@ export function NavbarContainer({ children }) {
 export function NavItem({ children, onClick }) {
   return (
     <button
-      className="text-white no-underline text-base font-light px-4 py-1 rounded-full transition-colors duration-300 ease-in-out hover:bg-white/10 focus:bg-[#3665B5]"
+      className="text-white no-underline text-base font-light px-4 py-1 rounded-full transition-colors duration-300 ease-in-out hover:bg-white/10"
       onClick={onClick}
     >
       {children}

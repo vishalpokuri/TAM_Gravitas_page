@@ -17,7 +17,6 @@ export default function Nav({
         <NavItem onClick={scrollToEvents}>Events</NavItem>
         <NavItem onClick={scrollToAbout}>About</NavItem>
         <NavItem onClick={scrollToContact}>Contact</NavItem>
-        <NavItem href="#register">Register</NavItem>
       </NavbarContainer>
     </div>
   );

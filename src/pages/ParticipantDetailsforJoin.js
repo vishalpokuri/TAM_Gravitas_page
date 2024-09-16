@@ -1,9 +1,9 @@
 import React from "react";
 import { Footer } from "../components/Footer";
 import Nav from "../components/Nav";
-import TeamForm from "../components/TeamForm";
 import HamburgerMenu from "../components/hamburgerMenu";
-function ParticipantDetails({
+import JoinTeam from "../components/JoinTeam";
+export default function ParticipantDetailsforJoin({
   scrollToEventsBig,
   scrollToAbout,
   scrollToContact,
@@ -26,14 +26,12 @@ function ParticipantDetails({
       <div className="w-screen h-screen bg-black bg-cover bg-center">
         <div className="flex flex-col items-center text-white">
           <h1 className="text-4xl md:text-6xl leading-tight mt-14 text-center">
-            PARTICIPANT DETAILS
+            Join a Team
           </h1>
-          <TeamForm />
+          <JoinTeam />
         </div>
       </div>
       <Footer />
     </>
   );
 }
-
-export default ParticipantDetails;

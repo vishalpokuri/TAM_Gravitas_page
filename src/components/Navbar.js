@@ -5,7 +5,7 @@ export function NavbarContainer({ children }) {
     <nav
       className="w-1/3 hidden md:flex justify-around items-center bg-[#0a0a0a] p-3 rounded-full  h-14 z-10"
       style={{
-        boxShadow: "0 0 15px 5px rgba(30, 58, 138, 0.7)", // Equivalent to shadow-blue-900/70
+        boxShadow: "0 0 10px 2px rgba(30, 58, 138, 0.7)", // Equivalent to shadow-blue-900/70
       }}
     >
       {children}

@@ -45,9 +45,11 @@ function SurvivalShowdown({
                 CREATE TEAM <br /> →
               </TeamCard>
             </Link>
-            <TeamCard>
-              JOIN <br /> TEAM <br /> →
-            </TeamCard>
+            <Link to="/join-ParticipantDetails/1">
+              <TeamCard>
+                JOIN <br /> TEAM <br /> →
+              </TeamCard>
+            </Link>
           </div>
           <Button what="Back to Home" onClick={handleHomeNavigate} />
         </div>

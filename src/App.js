@@ -1,10 +1,9 @@
 import "./App.css";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import SurvivalShowdown from "./pages/SurvivalShowdown";
 import CodeCortex from "./pages/CodeCortex";
-import ParticipantDetails from "./pages/ParticipantDetails";
-
+import ParticipantDetailsforCreate from "./pages/ParticipantDetailsforCreate";
+import ParticipantDetailsforJoin from "./pages/ParticipantDetailsforJoin";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 function App() {
@@ -109,7 +108,18 @@ function App() {
           <Route
             path="/registration-ParticipantDetails/0"
             element={
-              <ParticipantDetails
+              <ParticipantDetailsforCreate
+                scrollToEventsBig={scrollToEventsBig}
+                scrollToAbout={scrollToAbout}
+                scrollToContact={scrollToContact}
+                menuItems={menuItems}
+              />
+            }
+          />
+          <Route
+            path="/join-ParticipantDetails/0"
+            element={
+              <ParticipantDetailsforJoin
                 scrollToEventsBig={scrollToEventsBig}
                 scrollToAbout={scrollToAbout}
                 scrollToContact={scrollToContact}
@@ -121,7 +131,18 @@ function App() {
           <Route
             path="/registration-ParticipantDetails/1"
             element={
-              <ParticipantDetails
+              <ParticipantDetailsforCreate
+                scrollToEventsBig={scrollToEventsBig}
+                scrollToAbout={scrollToAbout}
+                scrollToContact={scrollToContact}
+                menuItems={menuItems}
+              />
+            }
+          />
+          <Route
+            path="/join-ParticipantDetails/1"
+            element={
+              <ParticipantDetailsforJoin
                 scrollToEventsBig={scrollToEventsBig}
                 scrollToAbout={scrollToAbout}
                 scrollToContact={scrollToContact}

@@ -1,5 +1,6 @@
 import bg from "../images/bluegrid.png";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import data_alchemy from "../images/data_alchemy.png";
 import survival from "../images/survival.png";
 import codecortex from "../images/codecortex.png";
@@ -20,6 +21,28 @@ export function Home({
   scrollToContact,
   menuItems,
 }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if the state has the scrollTo property set to "about"
+    if (location.state?.scrollTo === "about" && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location, aboutRef]); 
+
+  useEffect(() => {
+    // Check if the state has the scrollTo property set to "events"
+    if (location.state?.scrollTo === "events" && eventsRefbig.current) {
+      eventsRefbig.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location, eventsRefbig]); 
+
+  useEffect(() => {
+    // Check if the state has the scrollTo property set to "contact"
+    if (location.state?.scrollTo === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location, contactRef]); 
   return (
     <>
       <div className="hidden md:block">
